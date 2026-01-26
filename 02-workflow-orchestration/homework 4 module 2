@@ -1,0 +1,24 @@
+-- homework 4 module 2
+-- question 3
+
+SELECT count(*)
+FROM `de-zoomcamp-26-482807.zoomcamp.yellow_tripdata`
+WHERE EXTRACT(YEAR FROM tpep_pickup_datetime) = 2020;
+
+-- return: 24648663
+
+-- question 4
+
+SELECT count(*)
+FROM `de-zoomcamp-26-482807.zoomcamp.green_tripdata`
+WHERE EXTRACT(YEAR FROM lpep_pickup_datetime) = 2020;
+
+--return: 1734039
+
+-- question 5
+
+SELECT count(*)
+FROM `de-zoomcamp-26-482807.zoomcamp.yellow_tripdata`
+WHERE EXTRACT(YEAR FROM tpep_pickup_datetime) = 2021 and EXTRACT(MONTH FROM tpep_pickup_datetime) = 3;
+
+--return: 1925130
